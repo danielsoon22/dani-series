@@ -1,0 +1,30 @@
+/* ✅ Estilos para el encabezado */
+header {
+  text-align: center;
+  background: linear-gradient(90deg, #8441ff, #2b6bff);
+  color: white;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; /* Espacio debajo del header */
+}
+
+/* ✅ Estilos para el logo */
+.logo {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* ✅ Estilos para el nombre */
+h4 {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: normal;
+  opacity: 0.8;
+}

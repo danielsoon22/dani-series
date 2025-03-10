@@ -1,0 +1,26 @@
+<!--  Campo de búsqueda -->
+<h2 class="search-title">🔍🔍🔍 Search the title of a series</h2>
+<input
+  type="text"
+  [(ngModel)]="searchQuery"
+  (input)="searchSeries()"
+  placeholder="Search for a series..."
+  class="search-input"
+/>
+
+<!--  Lista de series -->
+<div class="series-container">
+  <div *ngFor="let serie of series" class="card">
+    <img [src]="'https://image.tmdb.org/t/p/w500' + serie.poster_path" alt="{{ serie.name }}">
+    <h3>{{ serie.name }}</h3>
+    <p class="description">{{ serie.overview || 'No description available.' }}</p>
+    <a [routerLink]="['/series', serie.id]" class="btn">View Details</a>
+  </div>
+</div>
+
+<!--  Controles de paginación -->
+<div class="pagination">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>
